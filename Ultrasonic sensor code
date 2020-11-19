@@ -1,0 +1,30 @@
+const int outPin = 9; 
+const int inPin = 10;
+const float dist = 20 // This is a place holder for the distance
+float duration, distance; 
+void setup() {
+  // put your setup code here, to run once:
+ pinMode(outPin, OUTPUT); 
+ pinMode(inPin, INPUT); 
+ Serial.begin(9600); 
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+digitalWrite(outPin, LOW); 
+ delayMicroseconds(2); 
+ digitalWrite(outPin, HIGH); 
+ delayMicroseconds(10); 
+ digitalWrite(outPin, LOW); 
+ // It is high for 10 microseconds as it sends out an 8 cycle burst from the
+ //transmitter which bounces off an object and hits the reciever
+
+ duration = pulseIn(inPin, HIGH); //Stores how long inPin is high due to the waves
+distance=(duration*.0343)/2 //Speed of sound is in cm per microsecond. Waves hits objects and comes back
+  // We know the distance from the sensor to the front edge of the dispenser.
+  //Goal is to calculate the average time it takes for the waves to hit one's hand at the bottom of the dispenser
+
+// We need a threshold for the distance. If the distance is less than a said amount, the dispenser should dispense.
+
+  if distance<dist
+  // dispense mask

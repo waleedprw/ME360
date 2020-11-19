@@ -1,0 +1,18 @@
+const int pinLaser = 2; // output signal pin of laser module/laser pointer
+const int pinReceiver = 3; // input signal pin of receiver/detector 
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(pinLaser, OUTPUT);
+  pinMode(pinReciever, INPUT);
+  digitalWrite(pinLaser,HIGH); //Emits Laser
+  Serial.begin(9600); //Lets the game begin
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  int signal=digitalRead(pinReciever); //Low if it does not reach the detector which suggests 
+  //that there is a barrier between the reciever and emitter. Need to add that if high, 
+  //an LED should light up.
+
+  
+}

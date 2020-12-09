@@ -1,5 +1,5 @@
-const int outPin = 9; 
-const int inPin = 10;
+const int outPin = 5; 
+const int inPin = A0;
 const float dist = 20 // This is a place holder for the distance
 float duration, distance; 
 void setup() {

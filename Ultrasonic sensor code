@@ -21,10 +21,5 @@ digitalWrite(outPin, LOW);
 
  duration = pulseIn(inPin, HIGH); //Stores how long inPin is high due to the waves
 distance=(duration*.0343)/2 //Speed of sound is in cm per microsecond. Waves hits objects and comes back
-  // We know the distance from the sensor to the front edge of the dispenser.
-  //Goal is to calculate the average time it takes for the waves to hit one's hand at the bottom of the dispenser
-
-// We need a threshold for the distance. If the distance is less than a said amount, the dispenser should dispense.
-
-  if distance<dist
-  // dispense mask
+Serial.println(distance);
+delay(100);
